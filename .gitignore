@@ -32,3 +32,7 @@ install/win32/meta.py
 /man/
 /share/
 /src/
+
+
+# themes
+/addons/backend_theme_v10

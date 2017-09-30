@@ -3,7 +3,7 @@
 
 
 from odoo import fields, models, api, _
-import odoo.addons.decimal_precision as dp
+from odoo.addons import decimal_precision as dp
 from odoo.exceptions import UserError
 
 
@@ -357,7 +357,7 @@ class AccountVoucherLine(models.Model):
             self.company_id.id,
             self.voucher_id.currency_id.id,
             self.voucher_id.voucher_type)
-        for fname, fvalue in onchange_res['value'].iteritems():
+        for fname, fvalue in onchange_res['value'].items():
             setattr(self, fname, fvalue)
 
     def _get_account(self, product, fpos, type):
